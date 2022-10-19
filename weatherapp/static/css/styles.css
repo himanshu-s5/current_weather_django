@@ -1,0 +1,17 @@
+
+.nav-link{color:#fff;}
+  .img_icon{width:30px;height:30px;border-radius:50px;margin-right:10px;}
+
+
+
+ .active:hover{text-decoration:none;background-color:grey;color:#fff;}
+
+    .nav-link{text-align:center;border-radius:5px;width:100px;
+  height:40px;margin-left:30px;}
+  /*form -------*/
+  .errorlist{color:red}
+.weather-obj{border:1px solid blue;background-color:rgb(37, 150, 190)}
+  form{margin:auto;}
+  /*footer-css---------*/
+  footer{margin:100px 10px 10px;border-radius:5px;}
+  </<style>

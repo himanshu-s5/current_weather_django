@@ -1,0 +1,25 @@
+
+{%include 'header.html'%}
+<style>
+    .errorlist{color:red}
+</style>
+<a class="btn btn-primary m-2 p-2" href="/home/" role="button"><i class="fa-solid fa-arrow-left"></i> Back to home</a>
+
+<div class="input-group">
+   <form  style="margin:50px auto;" method="post" novalidate >
+       {%csrf_token%}
+       <h1>Resister</h1>
+       <div class="form-outline mb-4">
+           {%for x in form%}
+           {{x.label}} {{x}} {{x.errors}} <br><br>
+           {%endfor%}
+       <button class="btn btn-primary">register</button>
+
+      <p>Already Register please <a href="{%url 'login_page'%}?next={{request.path}}">Login</a></p>
+       </div>
+   </form>
+
+</div>
+
+
+{%include 'footer.html'%}

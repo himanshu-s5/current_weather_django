@@ -1,0 +1,89 @@
+{%include 'header.html'%}
+{%load static%}
+{%if ser.is_authenticated%}
+  <button class="btn btn-danger"><a class="btn btn-sm link" href="/log_out/">Log out</a></button>
+  {%endif%}
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{%static 'img/photo4.png'%}" style="width:100;height:450px;border-radius:5px;;" class="d-block w-100" alt="...">
+    <div class="carousel-caption d-none d-md-block">
+        <h5>Clear Sky</h5>
+        <p>Hot Day free from darkness or obscurity</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{%static 'img/photo1.png'%}" style="width:100;height:450px;border-radius:5px;;" class="d-block w-100" alt="...">
+    <div class="carousel-caption d-none d-md-block">
+        <h5>Cloudy</h5>
+        <p>Somewhere in the Sky</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{%static 'img/photo11.jpg'%}" style="width:100;height:450px;border-radius:5px;;" class="d-block w-100" alt="...">
+    <div class="carousel-caption d-none d-md-block">
+      <h5>Thunder Sky </h5>
+        <p>Lightning over Lake Overholse</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!--Card sections-->
+<div style="margin:20px 10px; display:inline-flex;">
+<div class="card" style="width:25%;">
+  <img  style="height:100px;border-radius:5px;padding:10px;" src="{%static 'img/photo5.jpg'%}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Weather is the state of the atmosphere, describing for example the degree to which it is hot or cold, wet or dry, calm or stormy, clear or cloudy. On Earth, most weather phenomena occur in the lowest layer of the planet's atmosphere,
+  the troposphere,just below the stratosphere.
+   </div>
+  <button class="btn btn-dark m-4"><a class="btn link text-white" href="/home/weather/">see more</a></button>
+</div>
+  <div class="card" style="width:25%;">
+  <img  style="height:100px;border-radius:5px;padding:10px;" src="{%static 'img/photo6.png'%}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">2015 – 5th Warmest Global Year on Record (since 1880) as of 2021 – Colors indicate temperature anomalies (NASA/NOAA; 20 January 2016)
+  </div>
+    <button class="btn btn-dark m-4"><a class="btn link text-white" href="/home/global/">see more</a></button>
+
+</div>
+  <div class="card" style="width:25%;">
+
+  <img  style="height:100px;border-radius:5px;padding:10px;" src="{%static 'img/photo7.jpg'%}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">New Orleans, Louisiana, after being struck by Hurricane Katrina. Katrina was a Category 3 hurricane when it struck although it had been a category 5 hurricane in the Gulf of Mex
+</div>
+    <button class="btn btn-dark m-4"><a class="btn link text-white" href="/home/pop_n">see more</a></button>
+
+  </div>
+  <div class="card" style="width:25%;">
+
+  <img  style="height:100px;border-radius:5px;padding:10px;" src="{%static 'img/photo8.png'%}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text ">Forecast of surface pressures five days into the future for the north Pacific, North America, and the north Atlantic Ocean as on 9 June 2008.
+   </div>
+    <button class="btn btn-dark m-4"><a class="btn link text-white" href="/home/forecast/">see more</a></button>
+
+</div>
+</div>
+<div class="card">
+  <img style="width:75%;height:300px;border-radius:5px;padding:20px;" src="{%static 'img/globalimg.png'%}">
+  <p class="card-text text-blue" style="padding:0px 200px;text-align:center">In recent decades, new high temperature records have
+    substantially outpaced new low temperature
+    records on a growing portion of Earth's surface</p>
+  <button class="btn btn-primary"><a class="btn link text-white" href="http://berkeleyearth.org/global-temperature-report-for-2021/">Go to link</a></button>
+</div>
+{%include 'footer.html'%}

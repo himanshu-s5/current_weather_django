@@ -1,0 +1,78 @@
+
+{%include 'header.html'%}
+{%load static%}
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  margin-left:200px;
+  width:300px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.title {
+  color: grey;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+<!--.content-img{margin-left:100px;}-->
+<!--.content-text{margin-right:600px; width:500px;}-->
+</style>
+
+
+<div class="about-section">
+  <h1>Something About me</h1>
+  <p>I am a developer responsible for developing web pages handling server side.</p>
+  <p>Resize the browser window to see that this page is responsive by the way.</p>
+</div>
+<h2 class="text-center m-4">My Profile</h2>
+
+<div class="container">
+  <div class="content-img m-4 p-4">
+      <img src="{%static 'img/myprofile.jfif'%}" alt="Himanshu" style="width:16%;border-radius:50%;margin-bottom:20px;">
+      <div>
+          <i class="fa-brands fa-facebook m-2"></i>
+          <i class="fa-brands fa-linkedin-in m-2"></i>
+          <i class="fa-brands fa-github m-2"></i>
+      </div>
+
+     </div>
+    <div class="content-text m-4 p-4">
+        <h2>Himanshu Sharma</h2>
+        <p class="title">Design and implement Python code using the Django framework</p>
+        <p>Identify and fix bottlenecks that may arise from inefficient code.</p>
+        <p> Identify and fix software bugs. </p>
+        <p>Create a wide variety of unit tests to verify the functionality of software. </p>
+        <p>anshu23hhh@gmail.com</p>
+        <p><button class="btn btn-dark m-2"><a class="btn link text-white" href="/contactus/">Contact</a></button></p>
+      </div>
+     <hr class="w-50">
+  </div>
+
+
+{%include 'footer.html'%}

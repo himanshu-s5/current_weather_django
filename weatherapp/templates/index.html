@@ -1,0 +1,42 @@
+{% include 'header.html'%}
+{%load static%}
+<style>
+body{background-color:#e6faff}
+</style>
+{%if error%}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Message:</strong> {{error}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{%endif%}
+<div class="container-fluid mb-1">
+<button class="btn btn-primary" style="margin:10px 20px"><a class="btn link" href="/home/">Home page</a></button>
+
+<h1 style="text-align:center;color:brown;margin:20px;">Search Weather</h1>
+<div class="container">
+    <form method="post" action="" class="col-md-6 col-md-offset-3 ">
+      {% csrf_token %}
+       <div class="input-group" style="margin-top:50px;">
+        <input type="text" class="form-control" name="city" placeholder="City name">
+
+          <button class="btn btn-default" type="submit">
+            <i class="fa-solid fa-magnifying-glass" style="text-align:right;font-size:30px;"></i>
+          </button>
+        </div>
+        </form>
+{% if country_code and name%}
+    <div class="container bg-danger w-50 ml-4 p-4 text-black" style="margin:50px auto;">
+      <h1 style="color:#fff;">{{name}}, {{country_code}}</h1>
+
+      <h3 style="color:#fff;"><img src="{%static 'img/'%}{{cloud_image}}.png" style="width:50px;border-radius:25px;height:50px;margin:0px 20px;" alt="{{cloud_image}}"/>temp : {{temp}} °C</h3>
+        <p style="margin-left:70px;color:white;">feel like: {{feel_like}} °C, {{cloud_image}}, </p>
+         <p style="color:#fff;"><img src="{%static 'img/wind.png'%}" style="width:30px;border-radius:15px;height:30px;margin:0px 20px;">wind-speed: {{wind}}m/s, pressure: {{pressure}} hPa</p>
+        <p style="color:#fff;"><img src="{%static 'img/humidity.png'%}" style="width:30px;border-radius:15px;height:30px;margin:0px 20px;">humidity : {{humidity}} %, visibility: {{visibility}}km</p>
+    </div>
+
+
+{% endif %}
+
+</div>
+</div>
+  {% include 'footer.html'%}

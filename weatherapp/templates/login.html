@@ -1,0 +1,21 @@
+{%include 'header.html'%}
+
+<div class="container col-md-4">
+<form method="post" class="form-col-md-4">
+      {% csrf_token %}
+    <h1>Login</h1>
+      <div class="form-outline mb-4">
+            <label class="form-label">Username</label>
+            <input type="text" name="username" class="form-control form-control"
+              placeholder="Enter email address" required/>
+            </div>
+    <div class="form-outline mb-4">
+            <label class="form-label">Password</label>
+            <input type="password" name="pass1" class="form-control form-control"
+              placeholder="Enter Password" required/>
+            </div>
+    <button class="btn btn-primary">Login</button>
+</form>
+</div>
+
+{%include 'footer.html'%}
