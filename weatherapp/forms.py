@@ -15,12 +15,12 @@ class ImageForm(forms.ModelForm):
 
 
 class BmiForm(forms.Form):
-    height = forms.FloatField(label='Height',
+    height = forms.FloatField(label='Height in cm',
                               widget=forms.TextInput(attrs=
                                                      {'placehoder': 'Enter '
                                                                     'Height in '
                                                                     'cm'}))
-    weight = forms.FloatField(label='Weight',
+    weight = forms.FloatField(label='Weight in kg',
                               widget=forms.TextInput(attrs=
                                                      {'placehoder': 'Enter '
                                                                     'Weight in '

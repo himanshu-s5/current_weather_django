@@ -112,7 +112,7 @@ def register(request):
                                                    last_name=last_name, email=email, password=password)
                 user_db.save()
 
-                messages.success(request, f'Your account has been created !')
+                messages.success(request, "Account created successfully!")
                 return redirect('login_page')
             else:
                 messages.warning(request, 'Not a valid credential try again')
@@ -133,11 +133,11 @@ def login_page(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                messages.success(request, f'Successfully logged in !!')
-                return redirect(redirect_to)
+                messages.success(request, 'Successfully logged in !!')
+                return redirect(gallery)
 
             else:
-                messages.warning(request, 'Username password are not match')
+                messages.warning(request, 'Invalid Username or password')
                 return redirect('login_page')
         return render(request, 'login.html')
     except Exception as e:

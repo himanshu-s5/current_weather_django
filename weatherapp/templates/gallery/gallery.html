@@ -2,17 +2,17 @@
 {% include 'header.html' %}
 {%load static%}
 <style>
-    textarea{height: 146px;background-color:lightblue;border:5px solid #fff;}
-    form{border:2px solid lightblue;padding:20px;}
+    textarea{height: 146px;background-color:white;border:5px solid #fff;}
+    form{border:5px solid lightblue;padding:20px;}
 </style>
 {%if user.is_authenticated%}
 <div class="carousel-inner" style="margin-bottom:20px;">
     <div class="carousel-item active">
-      <img src="{%static 'img/photo12.png'%}" style="width:100;height:400px;" class="d-block w-100" alt="...">
+      <img src="{%static 'img/photo12.png'%}"class="d-block w-100" alt="...">
     <div class="carousel-caption d-none d-md-block">
-    <form method="post" action="" enctype="multipart/form-data">
+    <form method="post" action="" enctype="multipart/form-data" style="margin:50px;border:none">
         {% csrf_token %}
-        <h1>Upload your own Galary</h1>
+        <h2>Upload your own Galary</h2>
         {{form.as_p}}
         <button class="btn btn-primary" type="submit">Upload</button>
     </form>
@@ -35,33 +35,5 @@
 {%endfor%}
 {%endif%}
 <hr style="border:2px solid black;">
-
-<div class="container" style="width:500px;">
-    <a href="https://en.wikipedia.org/wiki/Ultraviolet_index" style="text-decoration:none;">
-
-  <img  style="height:300px;padding:10px;" src="{%static 'img/uvIndex.png'%}" class="card-img-top" alt=" Uv Index">
-
-    <div class="card-body">
-      <p class="card-text">The scale of the UV index ranges from 0 to 11+; the higher the index, the greater the danger of exposure to sunlight (Table 3.5). Usually, the UV index is higher in countries located near the Equator and decreases with increasing latitude.</p>
-  </div>
-        <button class="btn btn-success" style="margin-left:180px;margin:20px;">See More</button>
-
-    </a>
-    <hr style="border:2px solid green;">
-</div>
-
-<div class="container" style="width:500px;">
-    <a href="/bmi/" style="text-decoration:none;">
-
-  <img  style="height:300px;padding:10px;" src="{%static 'img/BMI.jpg'%}" class="card-img-top" alt=" Uv Index">
-
-    <div class="card-body">
-        <p class="card-text">Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women. View the BMI tables or click the link button to compute yours.</p></div>
-    <button class="btn btn-success" style="margin-left:180px;margin:20px;">See More</button>
-
-    </a>
-    <hr style="border:2px solid green;">
-</div>
-
 
 {%include 'footer.html'%}
